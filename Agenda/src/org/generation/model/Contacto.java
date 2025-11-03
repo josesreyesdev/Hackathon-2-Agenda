@@ -27,9 +27,6 @@ public class Contacto {
 
     @Override
     public java.lang.String toString() {
-        return "Contacto{" +
-                "Nombre='" + Nombre + '\'' +
-                ", nuevoTelefono='" + nuevoTelefono + '\'' +
-                '}';
+        return Nombre + " - " + nuevoTelefono;
     }
 }
