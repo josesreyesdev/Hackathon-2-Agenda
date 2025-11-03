@@ -67,10 +67,23 @@ public class Main {
             return;
         }
 
-        System.out.println("\nIngresa nombre completo:");
-        String nombre = scanner.nextLine();
-        System.out.println("Ingresa tu número de teléfono");
-        String numero = scanner.nextLine();
+        String nombre = "";
+        while (nombre.trim().isEmpty()) {
+            System.out.println("\nIngresa nombre completo:");
+            nombre = scanner.nextLine();
+            if (nombre.trim().isEmpty()) {
+                System.out.println("El nombre no puede estar vacío. Inténtalo de nuevo.");
+            }
+        }
+
+        String numero = "";
+        while (numero.trim().isEmpty()) {
+            System.out.println("\nIngresa tu número de teléfono");
+            numero = scanner.nextLine();
+            if (numero.trim().isEmpty()) {
+                System.out.println("El numero no puede estar vacío. Inténtalo de nuevo.");
+            }
+        }
 
         Contacto contacto = new Contacto(nombre, numero);
         service.anadirContacto(contacto);
