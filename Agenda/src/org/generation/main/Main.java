@@ -25,6 +25,7 @@ public class Main {
                 3.- Buscar contacto
                 4.- Eliminar contacto
                 5.- Espacio de mi agenda
+                6.- Contacto existente en mi agenda
                 
                 0.- Salir
                 """;
@@ -40,12 +41,23 @@ public class Main {
                 case 3 -> buscarContacto();
                 case 4 -> eliminarContacto();
                 case 5 -> espacioDeMiAgenda();
+                case 6 -> existeContacto();
                 case 0 -> {
                     System.out.println("\n***************** Regresa pronto ******************");
                     return;
                 }
                 default -> System.out.println("Ingresa una opción válida");
             }
+        }
+    }
+
+    private static void existeContacto() {
+        System.out.println("\nIngresa nombre completo:");
+        String nombre = scanner.nextLine();
+
+        Contacto contacto = service.buscaContacto(nombre);
+        if (service.existeContacto(contacto)) {
+            System.out.println("\nContacto existente en tu agenda");
         }
     }
 
