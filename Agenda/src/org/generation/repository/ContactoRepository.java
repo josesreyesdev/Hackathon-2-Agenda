@@ -9,7 +9,7 @@ public interface ContactoRepository {
     void anadirContacto(Contacto c);
     void eliminarContacto(Contacto c);
     boolean existeContacto(Contacto c);
-    String buscaContacto(String nombre) throws ContactoNotFoundException;
+    Contacto buscaContacto(String nombre) throws ContactoNotFoundException;
     List<Contacto> listarContactos();
     Boolean agendaLlena();
     int espaciosLibres();

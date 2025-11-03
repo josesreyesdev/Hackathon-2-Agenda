@@ -45,14 +45,14 @@ public class AgendaService implements ContactoRepository {
     }
 
     @Override
-    public String buscaContacto(String nombre) throws ContactoNotFoundException {
+    public Contacto buscaContacto(String nombre) throws ContactoNotFoundException {
 
         for (Contacto contacto: contactos) {
-            if(contacto.getNombre().equals(nombre)){
-                return contacto.getNuevoTelefono();
+            if(contacto.getNombre().equalsIgnoreCase(nombre)){
+                return contacto;
             }
         }
-        throw new ContactoNotFoundException("No se encuentra el contacto con nombre" + nombre);
+        throw new ContactoNotFoundException("No se encuentra el contacto con nombre: " + nombre);
     }
 
     @Override
