@@ -12,7 +12,7 @@ public class Main {
     private static AgendaService service;
 
     static void main() {
-        System.out.println("Indica el tamaño de tu agenda");
+        System.out.println("\nIndica el tamaño de tu agenda");
         int capacidad = scanner.nextInt();
         service = new AgendaService(capacidad);
 
