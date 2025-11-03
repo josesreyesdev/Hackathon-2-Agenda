@@ -2,12 +2,10 @@ package org.generation.model;
 
 public class Contacto {
     private String Nombre;
-    private String Apellido;
     private String nuevoTelefono;
 
-    public Contacto(String Nombre, String Apellido, String nuevoTelefono){
+    public Contacto(String Nombre, String nuevoTelefono){
         this.Nombre = Nombre;
-        this.Apellido = Apellido;
         this.nuevoTelefono = nuevoTelefono;
     }
 
@@ -19,14 +17,6 @@ public class Contacto {
         Nombre = nombre;
     }
 
-    public String getApellido() {
-        return Apellido;
-    }
-
-    public void setApellido(String apellido) {
-        Apellido = apellido;
-    }
-
     public String getNuevoTelefono() {
         return nuevoTelefono;
     }
@@ -35,11 +25,10 @@ public class Contacto {
         this.nuevoTelefono = nuevoTelefono;
     }
 
-    @java.lang.Override
+    @Override
     public java.lang.String toString() {
         return "Contacto{" +
                 "Nombre='" + Nombre + '\'' +
-                ", Apellido='" + Apellido + '\'' +
                 ", nuevoTelefono='" + nuevoTelefono + '\'' +
                 '}';
     }
