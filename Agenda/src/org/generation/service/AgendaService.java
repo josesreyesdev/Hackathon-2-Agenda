@@ -52,7 +52,7 @@ public class AgendaService implements ContactoRepository {
                 return contacto;
             }
         }
-        throw new ContactoNotFoundException("No se encuentra el contacto con nombre: " + nombre);
+        throw new ContactoNotFoundException("No se encuentra el contacto: " + nombre);
     }
 
     @Override
